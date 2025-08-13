@@ -1,0 +1,122 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--  <meta charset="UTF-8">-->
+<!--  <title>Chart Test</title>-->
+<!--  &lt;!&ndash; اضافه کردن کتابخونه Chart.js از CDN &ndash;&gt;-->
+<!--  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1>My Chart</h1>-->
+<!--<canvas id="acquisitions"></canvas>-->
+<!--&lt;!&ndash; کد JS خودت &ndash;&gt;-->
+<!--<script src="/chart.js"></script>-->
+<!--</body>-->
+<!--</html>-->
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--  <meta charset="UTF-8">-->
+<!--  <title>Chart</title>-->
+<!--  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
+<!--  <script src="chart.js"></script>-->
+<!--</head>-->
+<!--<body>-->
+<!--<canvas id="acquisitions" width="400" height="200"></canvas>-->
+<!--</body>-->
+<!--</html>-->
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--  <title>chart.js</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--&lt;!&ndash;<div id="main-container">&ndash;&gt;-->
+<!--&lt;!&ndash;  <h1>Chart is good</h1>&ndash;&gt;-->
+<!--&lt;!&ndash;  <div id="chart-container"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+<!--<canvas id="my-chart"></canvas>-->
+<!--<script src = "https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>-->
+
+<!--<script>-->
+
+<!--  const data = {-->
+<!--    labels : [1,2,3,4,5],-->
+<!--    datasets : [{-->
+<!--      data: [322,31,46,768,875]-->
+<!--    }]-->
+<!--  }-->
+
+<!--  const ctx = document.querySelector("#my-chart");-->
+<!--  const myChart = new Chart(-->
+<!--    ctx,-->
+<!--    {-->
+<!--      type:"line",-->
+<!--      data-->
+
+<!--    }-->
+<!--  )-->
+<!--</script>-->
+
+<!--</body>-->
+<!--</html>-->
+
+<!--<html>-->
+<!--<head>-->
+<!--  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
+<!--  <canvas id="myChart"></canvas>-->
+<!--  <script>-->
+<!--    fetch('/api/chart-data')-->
+<!--      .then(res => res.json())-->
+<!--      .then(data => {-->
+<!--        new Chart(document.getElementById('myChart'), {-->
+<!--          type: 'bar',-->
+<!--          data: data-->
+<!--        });-->
+<!--      });-->
+
+<!--  </script> &lt;!&ndash; فقط اینجا فایل JS رو صدا می‌زنیم &ndash;&gt;-->
+<!--</head>-->
+<!--<body>-->
+
+<!--</body>-->
+<!--</html>-->
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--  <meta charset="UTF-8">-->
+<!--  <title>Chart Test</title>-->
+<!--  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>-->
+<!--  alert("chart.js loaded!");-->
+
+<!--</head>-->
+<!--<body>-->
+
+<!--<script src="/chart.js"></script>-->
+<!--<canvas id="myChart" width="400" height="400"></canvas>-->
+
+<!--</body>-->
+<!--</html>-->
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Chart test</title>
+
+  <!-- صریحاً فایل UMD Chart.js (ایمن‌ترین راه برای استفاده بدون bundler) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+
+  <!-- فایل خودت؛ قرار گیرد در ریشه‌ی سرور: /chart.js -->
+  <script src="/chart.js"></script>
+</head>
+<body>
+<canvas id="myChart" style="width:100%;height:400px;max-width:800px;"></canvas>
+</body>
+</html>
+
+
