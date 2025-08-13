@@ -8,7 +8,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 import software.xdev.vaadin.chartjs.ChartContainer;
 
-@Route(value = "test")
+//@Route(value = "test")
 public class Chart extends Composite<VerticalLayout> {
     public Chart() {
         ChartContainer chart = new ChartContainer();

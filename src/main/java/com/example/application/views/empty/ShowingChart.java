@@ -17,25 +17,15 @@ public class ShowingChart extends Div {
     public ShowingChart() {
 
 
-//            getElement().appendChild(
-//                    new Html("<canvas id='my-chart'></canvas>").getElement()
-//            );
-//            getElement().appendChild(
-//                    new Html("<script src='https://cdn.jsdelivr.net/npm/chart.js'></script>").getElement()
-//            );
-
         Button button = new Button("Show Chart");
-        button.addClickListener(e -> {
-//            removeAll();
+        button.addClickListener(event -> {
+
             getElement().appendChild(
                     new Html("<iframe src='/chart.html' style='width:400px;height:400px;border:none;'></iframe>").getElement()
             );
         });
 
         add(button);
-//            getElement().appendChild(
-//                    new Html("<script src='/chart.html'></script>").getElement()
-//            );
 
 
     }
