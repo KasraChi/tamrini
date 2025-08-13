@@ -22,6 +22,9 @@ public class PlatformService {
 
 }
 
+public int getAllTelegramUsages() {
+        return repository.countByName("T");
+}
 
 
 
