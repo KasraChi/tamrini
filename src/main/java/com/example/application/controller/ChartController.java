@@ -12,5 +12,5 @@ public class ChartController {
     @GetMapping("/chart")
     public String chartPage() {
 //        Button showButton = new Button("show chart");
-        return "Chart.html"; // این اسم فایل تو resources باشه
+        return "PlatformChart.html"; // این اسم فایل تو resources باشه
     }}

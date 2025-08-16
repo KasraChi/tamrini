@@ -111,10 +111,10 @@
 //     });
 //   });
 
-// console.log('chart.js loaded');
+// console.log('PlatformChart.js loaded');
 //
 // window.addEventListener('load', function () {
-//   console.log('chart.html loaded; fetching data...');
+//   console.log('PlatformChart.html loaded; fetching data...');
 //
 //   fetch('/api/platforms')
 //     .then(res => {
@@ -180,7 +180,7 @@
       }
 
       window._myChart = new Chart(ctx, {
-        type: 'line' +
+        type: 'doughnut' +
           '' +
           '',
         data: {
