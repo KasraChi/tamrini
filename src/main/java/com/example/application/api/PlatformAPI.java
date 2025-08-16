@@ -2,7 +2,6 @@ package com.example.application.api;
 
 
 import com.example.application.DTO.PlatformUsageProjection;
-import com.example.application.repository.PlatformRepository;
 import com.example.application.service.PlatformService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +14,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/platforms")
-public class API {
+public class PlatformAPI {
 
     @Autowired
     private PlatformService service;
