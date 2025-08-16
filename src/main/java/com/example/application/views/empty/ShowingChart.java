@@ -10,26 +10,16 @@ import com.vaadin.flow.router.Route;
 
 import java.util.List;
 
-//
-//@Route("chart")
-//public class ShowingChart extends Div {
-//
-//    public ShowingChart() {
-//
-//
-//        Button button = new Button("Show Chart");
-//        button.addClickListener(event -> {
-//
-//            getElement().appendChild(
-//                    new Html("<iframe src='/Chart.html' style='width:400px;height:400px;border:none;'></iframe>").getElement()
-//            );
-//        });
-//
-//        add(button);
-//
-//
-//    }
-//}
+
+@Route("chart")
+public class ShowingChart extends Div {
+
+    public ShowingChart() {
+
+            getElement().appendChild(
+                    new Html("<iframe src='/PlatformChart.html' style='width:400px;height:400px;border:none;'></iframe>").getElement()
+            );
+        }}
 
 
 //        // داده بک‌اند

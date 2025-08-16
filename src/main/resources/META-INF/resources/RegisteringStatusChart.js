@@ -1,4 +1,4 @@
-fetch('/api/platforms')
+fetch('/api/registeringStatus')
   .then(res =>  res.json()
     .then(data => {
       const canvas = document.getElementById('myChart');
