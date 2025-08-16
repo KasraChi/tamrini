@@ -10,26 +10,26 @@ import com.vaadin.flow.router.Route;
 
 import java.util.List;
 
-
-@Route("chart")
-public class ShowingChart extends Div {
-
-    public ShowingChart() {
-
-
-        Button button = new Button("Show Chart");
-        button.addClickListener(event -> {
-
-            getElement().appendChild(
-                    new Html("<iframe src='/chart.html' style='width:400px;height:400px;border:none;'></iframe>").getElement()
-            );
-        });
-
-        add(button);
-
-
-    }
-}
+//
+//@Route("chart")
+//public class ShowingChart extends Div {
+//
+//    public ShowingChart() {
+//
+//
+//        Button button = new Button("Show Chart");
+//        button.addClickListener(event -> {
+//
+//            getElement().appendChild(
+//                    new Html("<iframe src='/Chart.html' style='width:400px;height:400px;border:none;'></iframe>").getElement()
+//            );
+//        });
+//
+//        add(button);
+//
+//
+//    }
+//}
 
 
 //        // داده بک‌اند
@@ -41,7 +41,7 @@ public class ShowingChart extends Div {
 //        );
 //
 //        // ساخت iframe برای نمایش HTML
-//        IFrame iframe = new IFrame("META-INF/resources/chart.html");
+//        IFrame iframe = new IFrame("META-INF/resources/Chart.html");
 //        iframe.setWidth("600px");
 //        iframe.setHeight("400px");
 //        add(iframe);

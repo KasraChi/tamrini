@@ -1,9 +1,6 @@
 package com.example.application.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
@@ -21,6 +18,7 @@ public class Platform {
     @Column(name = "social_network")
     private String name;
 
+    @Transient
     private int usage;
 }
 //@Table(name = "messaging_platform_usage")

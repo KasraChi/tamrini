@@ -1,34 +1,33 @@
 package com.example.application.service;
 
-import com.example.application.model.Platform;
+import com.example.application.DTO.PlatformUsageProjection;
 import com.example.application.repository.PlatformRepository;
-import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class PlatformService {
 
-
     @Autowired
     private PlatformRepository repository;
 
+            public List<PlatformUsageProjection> getUsagePerPlatform() {
+                return repository.findPlatformUsageStats();
+            }
 
-    public List<Platform> getAllPlatforms() {
-        return repository.findAll();
 
-}
+//        return repository.findAll();
 
-public int getAllTelegramUsages() {
-        return repository.countByName("T");
-}
-
+    }
 
 
 
+
+//    public int getAllTelegramUsages() {
+//        return repository.countByName("T");
+//    }
 
 
 //    @PostConstruct
@@ -53,4 +52,4 @@ public int getAllTelegramUsages() {
 //    }
 //
 
-}
+

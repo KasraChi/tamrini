@@ -1,6 +1,8 @@
-package com.example.application;
+package com.example.application.api;
 
-import com.example.application.model.Platform;
+
+import com.example.application.DTO.PlatformUsageProjection;
+import com.example.application.repository.PlatformRepository;
 import com.example.application.service.PlatformService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,28 +14,33 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-    @RequestMapping("/api/platforms")
-    public class API {
+@RequestMapping("/api/platforms")
+public class API {
 
-        @Autowired
-        private PlatformService service;
+    @Autowired
+    private PlatformService service;
 
-        @GetMapping
-        public Map<String, Object> getPlatformsData() {
-            List<Platform> platformList = service.getAllPlatforms();
+    @GetMapping
+    public Map<String, Object> getPlatformsData() {
+        List<PlatformUsageProjection> platformList = service.getUsagePerPlatform();
 
-            List<String> labels = platformList.stream().map(Platform::getName).toList();
-            List<Integer> values = platformList.stream().map(Platform::getUsage).toList();
+        List<String> labels = platformList.stream()
+                .map(PlatformUsageProjection::getName)  // ✔
+                .toList();
 
-            Map<String, Object> response = new HashMap<>();
-            response.put("labels", labels);
-            response.put("values", values);
+        List<Integer> values = platformList.stream()
+                .map(PlatformUsageProjection::getUsage)        // ✔
+                .toList();
 
-            return response;
-        }
+        Map<String, Object> response = new HashMap<>();
+        response.put("labels", labels);
+        response.put("values", values);
 
-
+        return response;
     }
+
+
+}
 
 
 
