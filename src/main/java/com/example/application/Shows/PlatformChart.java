@@ -1,20 +1,14 @@
-package com.example.application.views.empty;
+package com.example.application.Shows;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.vaadin.flow.component.Html;
-import com.vaadin.flow.component.UI;
-import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.Div;
-import com.vaadin.flow.component.html.IFrame;
 import com.vaadin.flow.router.Route;
 
-import java.util.List;
 
+@Route("PlatformChart")
+public class PlatformChart extends Div {
 
-@Route("chart")
-public class ShowingChart extends Div {
-
-    public ShowingChart() {
+    public PlatformChart() {
 
             getElement().appendChild(
                     new Html("<iframe src='/PlatformChart.html' style='width:400px;height:400px;border:none;'></iframe>").getElement()
