@@ -23,17 +23,17 @@ public class RegisteringStatusAPI {
     @Autowired
     private UserCourseInformationService userService;
 
-
-    public long PrepaidCounts() {
-        return prepaidService.getAllCounts();
-    }
-
-    public long UserCounts() {
-        return userService.getAllCounts();
-    }
+//
+//    public long PrepaidCounts() {
+//        return prepaidService.getAllCounts();
+//    }
+//
+//    public long UserCounts() {
+//        return userService.getAllCounts();
+//    }
 
     public long NotRegisteredCounts() {
-        return Math.abs(PrepaidCounts() - UserCounts());
+        return Math.abs(prepaidService.getAllCounts()) - userService.getAllCounts();
     }
 
     @GetMapping
@@ -43,7 +43,7 @@ public class RegisteringStatusAPI {
 
         List<String> labels = List.of( "پیش ثبت نام" ,"ثبت نام","عدم ثبت نام") ;
 
-        List<Long> values = List.of(PrepaidCounts(),UserCounts(), NotRegisteredCounts());
+        List<Long> values = List.of(prepaidService.getAllCounts(),userService.getAllCounts(), NotRegisteredCounts());
         Map<String, Object> response = new HashMap<>();
         response.put("labels", labels);
         response.put("values", values);
