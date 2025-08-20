@@ -28,7 +28,7 @@ public class RegisteringStatusAPI {
 
 
     public long NotRegisteredCounts() {
-        return Math.abs(prepaidService.getAllCounts()) - userService.getAllCounts();
+        return Math.abs(prepaidService.getAllCounts() - userService.getAllCounts());
     }
 
     @GetMapping
@@ -36,7 +36,7 @@ public class RegisteringStatusAPI {
 
 //        List<PlatformUsageProjection> platformList = .getUsagePerPlatform();
 
-        List<String> labels = List.of( "پیش ثبت نام" ,"ثبت نام","عدم ثبت نام") ;
+        List<String> labels = List.of( "پیشثبت نام" ,"ثبت نام","عدم ثبت نام") ;
 
         List<Long> values = List.of(prepaidService.getAllCounts(),userService.getAllCounts(), NotRegisteredCounts());
         Map<String, Object> response = new HashMap<>();
