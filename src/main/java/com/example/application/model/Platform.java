@@ -18,6 +18,9 @@ public class Platform {
     @Column(name = "social_network")
     private String name;
 
+    @Column(name = "course_key")
+    private String classCode;
+
     @Transient
     private int usage;
 }

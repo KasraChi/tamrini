@@ -4,6 +4,7 @@ import com.example.application.DTO.PlatformUsageProjection;
 import com.example.application.model.Platform;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -12,8 +13,12 @@ import java.util.List;
 public interface PlatformRepository extends JpaRepository<Platform, Long> {
 
 
-    @Query("SELECT p.name as name, COUNT(p.name) as usage FROM Platform p GROUP BY p.name")
-    List<PlatformUsageProjection> findPlatformUsageStats();
+    @Query("SELECT p.name as name, COUNT(p.name) as usage FROM Platform p where p.classCode = :classCode GROUP BY p.name")
+    List<PlatformUsageProjection> findPlatformUsageStats(@Param("classCode") String classCode);
+
+
+    @Query("select p.classCode from Platform p")
+    List<String> findAllClassCodes();
 
 
 //

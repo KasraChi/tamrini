@@ -16,6 +16,9 @@ import java.util.Map;
 @RequestMapping("api/registeringStatus")
 public class RegisteringStatusAPI {
 
+//    @GetMapping("/api/chart/{classCode}")
+//    public Map<String, Object> getChartData(@PathVariable String classCode) {
+//        List<PlatformUsageProjection> platformList = service.getUsagePerClass(classCode);
 
     @Autowired
     private PrepaidUserInformationService prepaidService;
@@ -23,14 +26,6 @@ public class RegisteringStatusAPI {
     @Autowired
     private UserCourseInformationService userService;
 
-//
-//    public long PrepaidCounts() {
-//        return prepaidService.getAllCounts();
-//    }
-//
-//    public long UserCounts() {
-//        return userService.getAllCounts();
-//    }
 
     public long NotRegisteredCounts() {
         return Math.abs(prepaidService.getAllCounts()) - userService.getAllCounts();
@@ -56,6 +51,14 @@ public class RegisteringStatusAPI {
 //            .toList();
 }
 
+//
+//    public long PrepaidCounts() {
+//        return prepaidService.getAllCounts();
+//    }
+//
+//    public long UserCounts() {
+//        return userService.getAllCounts();
+//    }
 
 
 

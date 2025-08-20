@@ -7,7 +7,7 @@ import com.vaadin.flow.component.orderedlayout.FlexLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
-@Route("RegisteringChart")
+                @Route("RegisteringChart")
 public class RegisteringStatusChart extends VerticalLayout {
 
     public RegisteringStatusChart() {

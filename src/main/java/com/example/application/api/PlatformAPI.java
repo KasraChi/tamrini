@@ -5,6 +5,7 @@ import com.example.application.DTO.PlatformUsageProjection;
 import com.example.application.service.PlatformService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,15 +14,15 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/platforms")
+@RequestMapping("/api/platforms/{classCode}")
 public class PlatformAPI {
 
     @Autowired
     private PlatformService service;
 
     @GetMapping
-    public Map<String, Object> getPlatformsData() {
-        List<PlatformUsageProjection> platformList = service.getUsagePerPlatform();
+    public Map<String, Object>  getPlatformsData(@PathVariable String classCode) {
+        List<PlatformUsageProjection> platformList = service.getUsagePerPlatform(classCode);
 
         List<String> labels = platformList.stream()
                 .map(PlatformUsageProjection::getName)  // ✔
