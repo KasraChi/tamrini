@@ -5,7 +5,5 @@ public interface PlatformUsageProjection {
 
     String getName();
     Integer getUsage();
-    String getCourseKey();
-
 
 }
